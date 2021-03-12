@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Sign in & Sign Up Form | Vanilla JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="user signinBx">
+            <div class="imgBx"><img src="./img1.jpg" alt="img1"></div>
+            <div class="formBx">
+                <form>
+                    <h2>Sign In</h2>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <p class="signup">Don't have an account? <a href="#" onclick="toggleForm()">Sign up.</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="user signupBx">
+            <div class="formBx">
+                <form>
+                    <h2>Create an account</h2>
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Email Address">
+                    <input type="password" placeholder="Create Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="submit" value="Sign Up">
+                    <p class="signup">Already have an account? <a href="#" onclick="toggleForm()">Sign in.</a></p>
+                </form>
+            </div>
+            <div class="imgBx"><img src="./img2.jpg" alt="img2"></div>
+        </div>
+    </div>
+</section>
+<script>
+    function toggleForm() {
+        let section = document.querySelector("section");
+        let container = document.querySelector(".container");
+        container.classList.toggle("active");
+        section.classList.toggle("active");
+    }
+</script>
+</body>
+</html>
